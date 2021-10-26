@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+body{
+    background: rgba(12, 12, 12, 0.2);
+    height:100vh;
+    user-select: none;
+}
+nav{
+    background: #0fafaf;
+    color:#fff;
+    height:55px;
+    font-size:27px;
+    display:flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+nav ul{
+    list-style-type:none;
+}
+.gameContainer{
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+}
+.container{
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Roboto', sans-serif;
+}
+.container .box{
+    border:2px solid #000;
+    font-size: 8vw;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.box:hover{
+    background: rgba(100, 120, 200, .4);
+    cursor:pointer;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive ;
+}
+.info{
+    border:1px solid rgba(128, 128, 128, 0.9);
+    width: 200px ;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+#reset{
+    border: none;
+    width:100px;
+    height:35px;
+    /* padding:5px; */
+    margin:10px 50px;
+    border-radius:10px;
+    background: rgba(0, 0, 0, 0.5);
+    color:#FFF;
+}
+.imgBox img{
+/* display:none;*/
+width: 0;
+transition: width 1s ease-in-out;
+margin-left:40px;
+}
+
+/* uitilies class are here */
+
+.container .bt-0{
+    border-top:none;
+}
+.container .br-0{
+    border-right:none;
+}
+.container .bb-0{
+    border-bottom:none;
+}
+.container .bl-0{
+    border-left: none;
+}
+.line{
+    background: #000;
+    width:0;
+    height: 3px;
+    position: absolute;
+    transform: translate(-12vw, 15vw) rotate(-45deg);
+    z-index: 12;
+    transition: width 1s ease-in-out ;
+    border-radius:12px
+}
+/* making responsive website */
+@media screen and (max-width:900px) {
+
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size:1rem;
+    }
+    .container{
+        display:grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+    
+}
